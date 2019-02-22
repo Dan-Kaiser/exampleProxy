@@ -1,10 +1,11 @@
 #container {
   display: grid;
-  grid-template-areas: "picture description shop"
+  grid-template-areas: "picture description cart"
                        "similar similar similar"
                        "review review review";
-  grid-template-rows: 1fr 250px 1fr;
+  grid-template-rows: minMax(200px, 400px) 300px 1fr;
   grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-columns: 3fr 2fr 250px; */
   
   /* background: linear-gradient(to right, rgba(196,225,127,1) 0%, rgba(196,225,127,1) 12%, rgba(247,253,202,1) 12%, rgba(247,253,202,1) 25%, rgba(250,208,113,1) 25%, rgba(250,208,113,1) 39%, rgba(240,118,107,1) 39%, rgba(240,118,107,1) 52%, rgba(219,157,190,1) 52%, rgba(219,157,190,1) 65%, rgba(196,156,223,1) 65%, rgba(196,156,223,1) 78%, rgba(101,153,226,1) 78%, rgba(101,153,226,1) 89%, rgba(97,194,228,1) 89%, rgba(97,194,228,1) 100%); */
 }
@@ -15,15 +16,21 @@
   /* background-color: #8ca0ff; */
 }
 
-#desc {
+#similar {
+  grid-area: similar;
+  border: black solid 1px;
+  /* background-color: rgba(250,208,113,1); */
+}
+
+#desc #descriptions {
   grid-area: description;
   border: black solid 1px;
   /* background-color: rgba(196,225,127,1); */
 }
 
 #cart {
-
-  grid-area: shop;
+  
+  grid-area: cart;
   border: black solid 1px;
   /* background-color: rgb(94, 181, 60); */
 }
@@ -34,8 +41,3 @@
   /* background-color: rgb(134, 119, 232); */
 }
 
-#desc #similar {
-  grid-area: similar;
-  border: black solid 1px;
-  /* background-color: rgba(250,208,113,1); */
-}

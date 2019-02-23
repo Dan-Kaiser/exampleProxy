@@ -12,32 +12,32 @@
 
 #picture {
   grid-area: picture;
-  border: black solid 1px;
+  /* border: black solid 1px; */
   /* background-color: #8ca0ff; */
 }
 
 #similar {
   grid-area: similar;
-  border: black solid 1px;
+  /* border: black solid 1px; */
   /* background-color: rgba(250,208,113,1); */
 }
 
 #desc {
   grid-area: description;
-  border: black solid 1px;
+  /* border: black solid 1px; */
   /* background-color: rgba(196,225,127,1); */
 }
 
 #cart {
   
   grid-area: cart;
-  border: black solid 1px;
+  /* border: black solid 1px; */
   /* background-color: rgb(94, 181, 60); */
 }
 
 #reviews {
   grid-area: review;
-  border: black solid 1px;
+  /* border: black solid 1px; */
   /* background-color: rgb(134, 119, 232); */
 }
 

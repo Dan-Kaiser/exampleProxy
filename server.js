@@ -1,31 +1,17 @@
 const express = require('express');
 const app = express();
 const axios = require('axios')
-const port = 1337;
-
-// const pictureService = 'http://fec-picture-service-amazon.us-east-1.elasticbeanstalk.com/';
-// const descriptionService = 'http://interstellar-desc.us-east-2.elasticbeanstalk.com/';
-// const cartService = 'http://carts.us-east-2.elasticbeanstalk.com/';
-// const reviewService = 'http://reviews.us-east-2.elasticbeanstalk.com/';
+const port = 9001;
 
 
 app.use('/', express.static('./'));
 
-// app.get('/experiment', (req, res) => {
-//   let key = req.params.key;
-//   axios.get(`${pictureService}/id/${key}`).then(results => res.send(results));
-//   axios.get(`${descriptionService}/desc/${key}`).then(results => res.send(results));
-//   axios.get(`${descriptionService}/pic/${key}`).then(results => res.send(results));
-//   axios.get(`${cartService}/api/getAll`).then(results => res.send(results));
-//   axios.get(`${reviewService}/test`).then(results => res.send(results));
-// })
-
 app.get('/id/:key', (req, res) => {
-  console.log('requested!!!');
+  // console.log('requested!!!');
   let key = req.params.key;
   axios.get(`http://fec-picture-service-amazon.us-east-1.elasticbeanstalk.com/id/${key}`)
     .then(results => {
-      console.log('picture database results ', results.data);
+      // console.log('picture database results ', results.data);
       res.send(results.data);
     }).catch(error => {
       console.log('we have an error in picture service get request', err);
